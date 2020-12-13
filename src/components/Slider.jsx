@@ -3,15 +3,14 @@ import React from 'react';
 import 'rc-slider/assets/index.css';
 
 const Slider = (props) => {
-    const {tipFormatter} = props
+    const {tipFormatter, value} = props
     const { Handle } = RCSlider;
 
     const handle = props => {
-        const { value, dragging, index, ...restProps } = props;
+        const { dragging, index, ...restProps } = props;
         return <SliderTooltip
             prefixCls="rc-slider-tooltip"
-/*             overlay={`${value} %`}
- */            overlay={tipFormatter(value)}
+            overlay={tipFormatter(value)}
             visible={dragging}
             placement="top"
             key={index}

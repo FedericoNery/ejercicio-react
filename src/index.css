@@ -1,5 +1,6 @@
 html, body{
   height: 100%;
+  background-color: rgb(8, 79, 131);
 }
 
 #root {

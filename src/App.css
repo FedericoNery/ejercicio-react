@@ -28,3 +28,7 @@
   min-height: 100%;
   align-items: center;
 }
+
+p, h1, h4 {
+  color: white;
+}
