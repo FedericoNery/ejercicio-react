@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useCalcularCuotaCon2Decimales, updateInputAndSliderStatus, updateFromSlider } from '../utils/hooks'
 import { Validator } from '../validations/validations'
 import Button from './Button'
+import Container from './Container'
 import Input from './Input'
 import { SliderMontoTotal, SliderPlazo } from './SliderConfigurations'
 
@@ -39,34 +40,67 @@ const SimuladorDeCredito = (props) => {
 
     }
 
-    return <div className="container">
-        <div className="row">
-            <div className="align-items-vertically-center">
-                <div className="align-items-horizontally-center">
+    return <Container>
+        <div className="subcontainer azul-oscuro">
+            <Container>
+                <div className="item align-items-horizontally-center">
                     <h1>Simul&aacute; tu cr&eacute;dito</h1>
-                    <div className="container">
+                </div>
+            </Container>
+            <Container>
+                <div className="item flg1 ml-50">
                     <label>MONTO TOTAL</label>
+                </div>
+                <div className="item flg1 mr-50 align-item-end">
                     <Input id="inputMontoTotal" name="montoTotal" maxLength="5" onChange={onChangeMontoTotal} autoComplete="off" value={inputMontoTotal}
-                    className="input"></Input>
-                    </div>
+                        className="input"></Input>
+                </div>
+            </Container>
+            <div className="container mb-50">
+                <div className="fixed-width-slider">
                     <SliderMontoTotal onChange={onHandleMontoTotal} value={montoTotal} />
-                    <div className="container">
-                    <label>PLAZO</label>
-                    <Input id="inputPlazo" name="plazo" maxLength="2" onChange={onChangePlazo} autoComplete="off" value={inputPlazo} className="input"></Input>
-                    </div>
-
-                    <SliderPlazo onChange={onHandlePlazo} value={plazo} />
-                    <div className="container">
-                        <div className="row">
-                        <h4>{`CUOTA FIJA POR MES `}</h4><h2>{`$${cuota}`}</h2>
-                        </div>
-                    </div>
-                    <Button id="btnObtenerCredito" type="button" className="btn verde"><h2>OBTEN&Eacute; CR&Eacute;DITO</h2></Button>
-                    <Button id="btnVerDetalleDeCuotas" type="button" className="btn azul-claro"><h2>VER DETALLE DE CUOTAS</h2></Button>
                 </div>
             </div>
+            <Container>
+                <div className="item flg1 ml-50">
+                    <label>PLAZO</label>
+                </div>
+                <div className="item flg1 mr-50 align-item-end">
+                    <Input id="inputPlazo" name="plazo" maxLength="2" onChange={onChangePlazo} autoComplete="off" value={inputPlazo} className="input"></Input>
+                </div>
+            </Container>
+            <div className="container mb-50">
+                <div className="fixed-width-slider">
+                    <SliderPlazo onChange={onHandlePlazo} value={plazo} />
+                </div>
+            </div>
+            <Container>
+                <div className="row">
+                    <div className="azul-oscuro-2 same-line align-items-vertically-center">
+                        <div className="flex flg1 align-items-vertically-center align-items-horizontally-center">
+                            <h4>{`CUOTA FIJA POR MES `}</h4>
+                        </div>
+                        <div className="flex flg1 align-items-vertically-center align-items-horizontally-center">
+                            <h1 className="withoutMargin">{`$${cuota}`}</h1>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="flex flg2">
+                            <Button id="btnObtenerCredito" type="button" className="btn verde">
+                                <h2 className="flex">OBTEN&Eacute; CR&Eacute;DITO</h2>
+                            </Button>
+                        </div>
+                        <div className="flex flg1 ml-10">
+                            <Button id="btnVerDetalleDeCuotas" type="button" className="btn azul-claro">
+                                <h2 className="flex">VER DETALLE DE CUOTAS</h2>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </Container>
         </div>
-    </div>
+    </Container>
+
 }
 
 export default SimuladorDeCredito

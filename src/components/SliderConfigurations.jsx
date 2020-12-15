@@ -9,7 +9,7 @@ const SliderMontoTotalConfiguration = (props) => {
 
     const handleStyle = { border: "none" }
     const dotStyle = { width: "0", height: "0", border: "none" }
-    const railStyle = { "border-radius": "unset" }
+    const railStyle = { borderRadius: "unset" }
 
     return <Slider
         min={5000}
@@ -34,7 +34,7 @@ const SliderPlazoConfiguration = (props) => {
 
     const handleStyle = { border: "none" }
     const dotStyle = { width: "0", height: "0", border: "none" }
-    const railStyle = { "border-radius": "unset" }
+    const railStyle = { borderRadius: "unset" }
 
     return <Slider
         min={3}
