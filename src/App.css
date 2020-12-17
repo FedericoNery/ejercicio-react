@@ -133,3 +133,31 @@ label {
 }
 
 .btn:hover {opacity: 0.8}
+
+.text-align-center{
+  text-align: center;
+}
+
+.fixed-column{
+  flex: 1;
+}
+
+.fixed-column-2{
+  flex: 2;
+}
+
+.fixed-column-3{
+  flex: 3;
+}
+
+.pr-40{
+  padding-right: 40px;
+}
+
+.pl-40{
+  padding-left: 40px;
+}
+
+.fit-content-height{
+  height: 100%;
+}

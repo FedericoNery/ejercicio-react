@@ -77,22 +77,26 @@ const SimuladorDeCredito = (props) => {
             <Container>
                 <div className="row">
                     <div className="azul-oscuro-2 same-line align-items-vertically-center">
-                        <div className="flex flg1 align-items-vertically-center align-items-horizontally-center">
-                            <h4>{`CUOTA FIJA POR MES `}</h4>
+                        <div className="fixed-column">
+                            <div className="text-align-center align-items-vertically-center align-items-horizontally-center">
+                                <h4>{`CUOTA FIJA POR MES `}</h4>
+                            </div>
                         </div>
-                        <div className="flex flg1 align-items-vertically-center align-items-horizontally-center">
-                            <h1 className="withoutMargin">{`$${cuota}`}</h1>
+                        <div className="fixed-column">
+                            <div className="text-align-center align-items-vertically-center align-items-horizontally-center">
+                                <h1 className="withoutMargin">{`$${cuota}`}</h1>
+                            </div>
                         </div>
                     </div>
                     <div className="column">
-                        <div className="flex flg2">
-                            <Button id="btnObtenerCredito" type="button" className="btn verde">
+                        <div className="fixed-column-3">
+                            <Button id="btnObtenerCredito" type="button" className="btn verde pr-40 pl-40 fit-content-height">
                                 <h2 className="flex">OBTEN&Eacute; CR&Eacute;DITO</h2>
                             </Button>
                         </div>
-                        <div className="flex flg1 ml-10">
-                            <Button id="btnVerDetalleDeCuotas" type="button" className="btn azul-claro">
-                                <h2 className="flex">VER DETALLE DE CUOTAS</h2>
+                        <div className="fixed-column-2">
+                            <Button id="btnVerDetalleDeCuotas" type="button" className="btn azul-claro fit-content-height">
+                                <h4 className="flex">VER DETALLE DE CUOTAS</h4>
                             </Button>
                         </div>
                     </div>
