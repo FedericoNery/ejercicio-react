@@ -31,14 +31,14 @@ const SimuladorDeCredito = (props) => {
 
     const onHandlePlazo = (valor) => updateFromSlider(valor, setPlazo, setInputPlazo)
 
-    const onSubmit = () => {
+    /*const onSubmit = () => {
         const montoTotalAEnviar = new Validator(inputMontoTotal).isNotEmpty().isNumeric().esMayorOIgualA(5000).esMenorOIgualA(50000)
         const plazoAEnviar = new Validator(inputPlazo).isNotEmpty().isNumeric().esMayorOIgualA(3).esMenorOIgualA(24)
         if (montoTotalAEnviar.hasErrors || plazoAEnviar.hasErrors) {
             //Mostrar mensaje de error
         }
 
-    }
+    }*/
 
     return <Container>
         <div className="subcontainer azul-oscuro">
